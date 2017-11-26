@@ -1,0 +1,34 @@
+#sidebar-container{
+    color: #FFF;
+}
+
+.sidebar-menu-item {
+    display: flex;
+}
+
+.sidebar-icon-container {
+    width: 1.5rem;
+}
+
+.sidebar-text-container {
+    flex: 1;
+}
+
+.sidebar-menu-header {
+    color: #FFFFFF;
+    font-size: .75rem;	
+    font-weight: 300;
+}
+
+.sidebar-menu-header, .sidebar-menu-item {
+    text-transform: capitalize;
+    padding:1.25rem 1.25rem 1.25rem 2.5rem;
+}
+
+.sidebar-divider {
+    height: 2px;	
+    width: 100%;	
+    border: 1px solid #004796;	
+    opacity: 0.75;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}

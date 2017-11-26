@@ -1,5 +1,6 @@
 #dashboard-container, .mat-cell {
     padding: 1.5rem;
+    font-size: 1rem;
 }
 .mat-row {
     padding: 0;
@@ -19,6 +20,7 @@
 }
 .mat-header-cell.mat-column-notifications {
     font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 .mat-column-clear {

@@ -1,3 +1,26 @@
-<p>
-  sidebar works!
-</p>
+<ng-template #recursiveMenu let-menu="menu">
+  <div class="sidebar-menu-item" *ngFor="let menuItem of menu">
+    <div class="sidebar-icon-container">
+      <i *ngIf="menuItem.icon" [ngClass]="menuItem.icon"></i>
+    </div>
+    <div class="sidebar-text-container">
+      <span>{{menuItem.title}}</span>
+    </div>
+    <div class="sidebar-icon-container">
+        <i *ngIf="menuItem.submenu" [ngClass]="menuItem.isToggled ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+    </div>    
+    <div class ="sidebar-submenu-container "*ngIf="false">
+      <ng-container *ngTemplateOutlet="recursiveMenu; context: { menu: menuItem.submenu }"></ng-container>
+    </div>
+  </div>
+</ng-template>
+
+<div id="sidebar-container">
+  <div class="sidebar-menu-section" *ngFor="let menuSection of menu.menuSections; let last = last">
+    <div class="sidebar-menu-header">
+      {{menuSection.header}}
+    </div>
+    <ng-container *ngTemplateOutlet="recursiveMenu; context: { menu: menuSection.menuItems }"></ng-container>
+    <div class="sidebar-divider" *ngIf="!last"></div>
+  </div>
+</div>

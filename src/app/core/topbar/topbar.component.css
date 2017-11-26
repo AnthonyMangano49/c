@@ -14,7 +14,6 @@
     flex-shrink: 0;
 
     background: #093D6A;
-
     /* todo this is temp */
     justify-content: center;
     display: flex;
@@ -52,6 +51,7 @@
     border-width: 1px 1px 1px 0;
     border-style: solid;
     border-color: #979797;
+    background: #FFF;
     border-radius: 0 16px 16px 0;
     font-size: 1rem;
 }

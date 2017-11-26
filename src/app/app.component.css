@@ -28,3 +28,6 @@
 #app-router-container {
     flex: 1;
 }
+#app-sidebar-container, #app-router-container {
+    overflow: auto;
+}
