@@ -1,0 +1,27 @@
+#dashboard-container, .mat-cell {
+    padding: 1.5rem;
+}
+.mat-row {
+    padding: 0;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #F0F0F0;
+}
+.mat-row:last-child{
+    border-radius: 0 0 .625rem .625rem;
+}
+.mat-header-row {
+    background: #00529B;
+    border-radius: .625rem .625rem 0 0;
+}
+.mat-header-cell {
+    color: #FFF !important;
+}
+.mat-header-cell.mat-column-notifications {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.mat-column-clear {
+    flex: none;
+    color: #B50010;
+}

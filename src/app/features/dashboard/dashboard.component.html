@@ -1,0 +1,19 @@
+<div id="dashboard-container">
+  <div id="dashboard-notifications-container">
+      <mat-table #table [dataSource]="notifications">
+        <ng-container matColumnDef="notifications">
+          <mat-header-cell *matHeaderCellDef> notifications </mat-header-cell>
+          <mat-cell *matCellDef="let notification"> {{notification.notification}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="clear">
+          <mat-header-cell *matHeaderCellDef> clear all </mat-header-cell>
+          <mat-cell *matCellDef="
+          let notification"> <i class="fa fa-times"></i> </mat-cell>
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+  </div>
+</div>

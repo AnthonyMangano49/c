@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    height: 100%;
+}
+#app-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#app-topbar-container {
+    /* todo variable */
+    height: 6.25rem;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.5);
+    display: flex;
+}
+#app-content-container {
+    flex: 1;
+    display: flex;
+}
+#app-sidebar-container {
+    /* todo this should be a variable
+    set this same width for topbar logo container  */
+    width: 18.75rem;
+
+    /* todo temp */
+    background: #00529B;
+}
+#app-router-container {
+    flex: 1;
+}
