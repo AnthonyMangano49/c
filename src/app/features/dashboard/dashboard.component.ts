@@ -28,4 +28,4 @@ export class DashboardComponent implements OnInit{
     this.notifications = new MatTableDataSource(notifications);
   }
     
-  }
+}

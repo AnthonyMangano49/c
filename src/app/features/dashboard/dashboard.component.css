@@ -2,6 +2,8 @@
     padding: 1.5rem;
     font-size: 1rem;
 }
+
+/* todo override mat/panel styles higher in css or put into variables */
 .mat-row {
     padding: 0;
     border-width: 0 1px 1px;
@@ -14,6 +16,8 @@
 .mat-header-row {
     background: #00529B;
     border-radius: .625rem .625rem 0 0;
+    min-height: 0;
+    padding: 1.5rem;
 }
 .mat-header-cell {
     color: #FFF !important;

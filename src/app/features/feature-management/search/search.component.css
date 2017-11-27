@@ -1,0 +1,28 @@
+/* //todo var */
+#feature-search-container {
+    padding: 1.5rem;
+}
+
+.panel {
+    margin-bottom: 1.5rem;
+}
+/* //todo rework panel css globally */
+.panel-header {
+    background: #00529B;
+    border-radius: .625rem .625rem 0 0;
+    min-height: 0;
+    padding: 1.5rem;
+    color: white;
+}
+
+.panel-content{
+    border-radius: 0 0 .625rem .625rem;
+    padding: 0;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #F0F0F0;
+}
+
+#panel-input-container {
+    padding: 1rem;
+}

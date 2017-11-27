@@ -2,33 +2,43 @@
     color: #FFF;
 }
 
-.sidebar-menu-item {
-    display: flex;
-}
-
-.sidebar-icon-container {
-    width: 1.5rem;
-}
-
-.sidebar-text-container {
-    flex: 1;
-}
-
 .sidebar-menu-header {
     color: #FFFFFF;
     font-size: .75rem;	
     font-weight: 300;
 }
 
-.sidebar-menu-header, .sidebar-menu-item {
+.sidebar-icon-container {
+    width: 1.25rem;
+    display: inline-block;
+}
+
+.sidebar-title-container {
+    padding-right: .75rem;
+}
+
+.sidebar-menu-header, .sidebar-item-container {
     text-transform: capitalize;
     padding:1.25rem 1.25rem 1.25rem 2.5rem;
+}
+
+.sidebar-item-container:hover {
+    background: #093D6A;
+}
+
+.sidebar-highlight {
+    background: #1270C4;
+}
+
+.sidebar-active {
+    font-weight: bold;
 }
 
 .sidebar-divider {
     height: 2px;	
     width: 100%;	
-    border: 1px solid #004796;	
+    border-width: 1px 0;
+    border-color: #004796;	
     opacity: 0.75;	
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }

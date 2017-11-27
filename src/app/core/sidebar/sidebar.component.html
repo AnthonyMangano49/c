@@ -1,15 +1,12 @@
 <ng-template #recursiveMenu let-menu="menu">
-  <div class="sidebar-menu-item" *ngFor="let menuItem of menu">
-    <div class="sidebar-icon-container">
-      <i *ngIf="menuItem.icon" [ngClass]="menuItem.icon"></i>
-    </div>
-    <div class="sidebar-text-container">
-      <span>{{menuItem.title}}</span>
-    </div>
-    <div class="sidebar-icon-container">
+  <div class="sidebar-menu-item" *ngFor="let menuItem of menu" [ngClass] = "setHighlights(menuItem)">
+    <div class="sidebar-item-container" (click)="itemClicked(menuItem)">
+        <span class="sidebar-icon-container"><i *ngIf="menuItem.icon" [ngClass]="menuItem.icon"></i></span>
+        <span class="sidebar-title-container" 
+          [ngClass]="{'sidebar-active': menuItem.route === currentRoute}">{{menuItem.title}}</span>
         <i *ngIf="menuItem.submenu" [ngClass]="menuItem.isToggled ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
-    </div>    
-    <div class ="sidebar-submenu-container "*ngIf="false">
+    </div>
+    <div class ="sidebar-submenu-container "*ngIf="menuItem.isToggled">
       <ng-container *ngTemplateOutlet="recursiveMenu; context: { menu: menuItem.submenu }"></ng-container>
     </div>
   </div>

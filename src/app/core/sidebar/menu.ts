@@ -16,7 +16,7 @@ interface IMenuItem {
     submenu?: Array<IMenuItem>
 }
 
-export { IMenu }
+export { IMenu, IMenuItem }
 
 
 
