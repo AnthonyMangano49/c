@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
-import { INotification } from '../../dashboard/notification';
-import { DashboardService } from '../../dashboard/dashboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -10,23 +8,18 @@ import { DashboardService } from '../../dashboard/dashboard.service';
 })
 export class SearchComponent implements OnInit {
   inputPlaceholder = "Search all, market, group, sub-group, product, plan";
-  displayedColumns = ['notifications', 'clear'];
-  notifications: MatTableDataSource<INotification>;
 
-  constructor(private service: DashboardService) {}
+
+  constructor(private router: Router) {}
   
   ngOnInit(): void {
     this.init();
   }
 
-  init() {
-    this.service.fetchNotifications().subscribe(response => {
-      this.populateNotifications(response);
-    })
-  }
+  init() {}
 
-  populateNotifications(notifications: Array<INotification>){
-    this.notifications = new MatTableDataSource(notifications);
+  navigate() {
+    this.router.navigate(['feature/edit']);
   }
 
 }

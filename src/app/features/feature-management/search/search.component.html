@@ -6,7 +6,7 @@
         <div class="panel-content">
             <div id="panel-input-container">
                 <input placeholder="{{inputPlaceholder}}">
-                <button>search</button>
+                <button class="panel-button">search</button>
             </div>
         </div>
     </div>
@@ -16,42 +16,14 @@
             Results
         </div>
         <div class="panel-content">
-            <div id="feature-results-row">
-                <button>view/edit selected accounts</button>
+            <div class="panel-sub-header">
+                <div id="search-panel-spacer">
+                    <button class="panel-button" (click)="navigate()">view/edit selected accounts</button>
+                </div>
+                <i id="search-results-ellipsis" class="fa fa-ellipsis-v"></i>
             </div>
                 table here
         </div>            
     </div>
-    
-
-    <!-- <mat-table #table [dataSource]="searchResults">
-        <ng-container matColumnDef="market">
-            <mat-header-cell *matHeaderCellDef> market </mat-header-cell>
-            <mat-cell *matCellDef="let notification"> {{notification.notification}} </mat-cell>
-        </ng-container>
-        
-        <ng-container matColumnDef="group">
-            <mat-header-cell *matHeaderCellDef> group </mat-header-cell>
-            <mat-cell *matCellDef="let notification"> <i class="fa fa-times"></i> </mat-cell>
-        </ng-container>
-    
-        <ng-container matColumnDef="subGroup">
-            <mat-header-cell *matHeaderCellDef> sub group </mat-header-cell>
-            <mat-cell *matCellDef="let subGroup"> <i class="fa fa-times"></i> </mat-cell>
-        </ng-container>
-    
-        <ng-container matColumnDef="product">
-            <mat-header-cell *matHeaderCellDef> product </mat-header-cell>
-            <mat-cell *matCellDef="let product"> <i class="fa fa-times"></i> </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="plan">
-            <mat-header-cell *matHeaderCellDef> plan </mat-header-cell>
-            <mat-cell *matCellDef="let plan"> <i class="fa fa-times"></i> </mat-cell>
-        </ng-container>
-    
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table> -->
 
 </div>
